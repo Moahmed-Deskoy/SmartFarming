@@ -1,7 +1,6 @@
-from django.forms import ModelForm
+from django import forms
 from .models import CropSuggestion
-class Suggestionsfrom(ModelForm):
-    class Meta:
+class cropSuggestionForm(forms.ModelForm):
+    class Meta:    
         model=CropSuggestion
-        fields=['N','P','K','Temprture','Humidity','ph','rainfall']
-        
+        fields='__all__'

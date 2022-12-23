@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'fontawesome_5',
     'home',
     'services',
+    'contact',
 ]
 
 MIDDLEWARE = [

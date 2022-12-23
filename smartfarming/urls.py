@@ -19,6 +19,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls','home')),
-    path('services',include('services.urls','services'))
+    path('services',include('services.urls','services')),
+    path('contact',include('contact.urls','contact')),
+
+
 ]
 urlpatterns += staticfiles_urlpatterns()

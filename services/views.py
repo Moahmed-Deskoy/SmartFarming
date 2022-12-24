@@ -1,7 +1,7 @@
 from audioop import reverse
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required 
-from .form import cropSuggestionForm   
+from .form import cropSuggestionForm  
 def crop_Suggestions(request):
     if request.method=='POST':
         form=cropSuggestionForm(request.POST)

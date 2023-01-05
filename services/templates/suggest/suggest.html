@@ -6,13 +6,13 @@
 
 <div class="container">
     <div class="row">
-        <h1 class="text-center text-primary text-uppercase p-2 ">Suggest  Soil  Crop</h1>    
+        <h1 class="text-center text-success text-uppercase p-2 ">Suggest  Soil  Crop</h1>    
         {% load bootstrap4 %}                
                    <form method="post"  class="form" enctype="multipart/form-data">
                     {% csrf_token %}
                    {% bootstrap_form form %}
                     {% buttons %}
-                   <button type="submit" class="btn btn-primary mt-2">Suggest</button>
+                   <button type="submit" class="btn btn-success m-2">Suggest</button>
                    {% endbuttons %}
                  </form>
     </div>

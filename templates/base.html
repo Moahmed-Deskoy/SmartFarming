@@ -17,7 +17,8 @@
     <link href="{%static 'css/css2.css' %}" rel="stylesheet">
     <link href="{%static 'css/all.min.css' %}" rel="stylesheet">
     <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{%static 'css/style.css' %}" rel="stylesheet">
+    
+<link href="{%static 'css/style.css' %}" rel="stylesheet">
 </head>
     <div class="container-fluid px-5 d-none d-lg-block">
         <div class="row gx-5 py-3 align-items-center">
@@ -30,7 +31,7 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg bg-success navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5">
+    <nav class="navbar navbar-expand-lg bg-success navbar-dark p-3">
         <a href="{%url 'home:home_render'%}" class="navbar-brand d-flex d-lg-none">
             <h1 class="m-0 display-4 text-white">SmartFraming</h1>
         </a>
@@ -39,10 +40,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto py-0">
-                <a href="{%url 'home:home_render'%}" class="nav-item nav-link ">Home</a>
-                <a href="{%url 'services:crop_Suggestions'%}" class="nav-item nav-link">Suggest Crop</a>
-                <a href="{%url 'services:crop_predictions'%}" class="nav-item nav-link">Predict Water Level</a>
-                <a href="{%url 'contact:contact_us' %}" class="nav-item nav-link">Contact</a>
+                <a href="{%url 'home:home_render'%}" class="nav-item nav-link text-light text-uppercase ">Home</a>
+                <a href="{%url 'services:crop_Suggestions'%}" class="nav-item nav-link text-light text-uppercase">Suggest Crop</a>
+                <a href="{%url 'services:crop_predictions'%}" class="nav-item nav-link text-light text-uppercase">Predict Water Level</a>
+                <a href="{%url 'contact:contact_us' %}" class="nav-item nav-link text-light text-uppercase">Contact</a>
 
             </div>
         </div>

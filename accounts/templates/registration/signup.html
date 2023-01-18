@@ -1,11 +1,14 @@
 {% extends "base_generic.html" %}
 {% load bootstrap4 %} 
+{% block title %}Signup{% endblock %}
+
 {% block content %}
+<div class="container">
 <h3>Sign Up</h3>
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {% bootstrap_form form %}
-    <a href="url 'account:profile'"><input type="submit" value="Sign Up" class="boxed-btn3 w-100"></a>
+    <a href="{%url 'home:home_render' %}"><input type="submit" value="Sign Up" class="btn btn-success py-md-3 px-md-5 me-3 mt-2"></a>
   </form>
-
+</div>
 {% endblock %}

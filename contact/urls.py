@@ -1,4 +1,4 @@
-app_name='home'
+app_name='contact'
 from django.urls import path,include
 from . import views
 urlpatterns = [

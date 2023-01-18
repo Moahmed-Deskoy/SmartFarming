@@ -1,5 +1,7 @@
 {% extends "base_generic.html" %}
 {% load bootstrap4 %} 
+{% block title %}Login{% endblock %}
+
 {% block content %}
 
   {% if form.errors %}
@@ -14,18 +16,18 @@
       <p>Please login to see this page.</p>
     {% endif %}
   {% endif %}
-
+<div class="container">
   <form method="post">
     {% csrf_token %}
     {% bootstrap_form form %}
-    <a href="{% url 'jobs:job_list' %}"><input type="submit" value="Login" class="boxed-btn3 w-100"></a>
+    <a href="{% url 'home:home_render' %}"><input type="submit" value="Login" class="btn btn-success py-md-3 px-md-5 me-3 mt-2"></a>
    
   </form>
 
   {# Assumes you setup the password_reset view in your URLconf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
   <p> Don't Have An Account?</p> 
-<a class="text-success font-weight-bold"href="{% url 'accounts:signup' %}">Join Jobawy</a>
- 
+<a class="text-success font-weight-bold"href="{% url 'accounts:signup' %}">Join us</a>
+</div>
 
 {% endblock %}

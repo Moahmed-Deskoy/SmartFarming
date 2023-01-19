@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
-{% block body %}
-
-{% endblock body %}
+{% block title %}{{user.username}}{% endblock %}
+{% block content %}
+<div class="container border border-success w-70 p-3 mt-3">
+    <div class="col-4 w-40 ml-0 mr-0 mx-auto text-center ">
+        {% if profile.image %}
+        <img class="w-50 mb-10 mx-auto rounded d-block img-thumbnail " src="{{profile.image.url}}" alt="">       
+        {% else %}
+        <img class="w-50 mb-10 mx-auto rounded d-block img-thumbnail " src="" alt="">
+        {% endif %}
+        <p>{{user.first_name}} {{user.last_name}}</p>
+    </div>    
+</div>
+{% endblock content %}
 
    

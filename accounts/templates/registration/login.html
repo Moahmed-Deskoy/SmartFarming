@@ -1,8 +1,10 @@
 {% extends "base_generic.html" %}
+{%load static%}
 {% load bootstrap4 %} 
+
 {% block title %}Login{% endblock %}
 
-{% block content %}
+{% block body %}
 
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
@@ -16,18 +18,25 @@
       <p>Please login to see this page.</p>
     {% endif %}
   {% endif %}
-<div class="container">
-  <form method="post">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    <a href="{% url 'home:home_render' %}"><input type="submit" value="Login" class="btn btn-success py-md-3 px-md-5 me-3 mt-2"></a>
-   
-  </form>
+<div class="container border border-success w-70   ">
+  <div class="col-4 w-40 ml-0 mr-0 mx-auto text-center  ">
+    <img class="w-50 " src="{%static '/img/login.png' %}">
+   </div>
+  <div class="row">
 
-  {# Assumes you setup the password_reset view in your URLconf #}
-  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
-  <p> Don't Have An Account?</p> 
-<a class="text-success font-weight-bold"href="{% url 'accounts:signup' %}">Join us</a>
+   <div class="col-4 w-40 ml-0 mr-0 mx-auto text-center ">
+      <form method="post" class="mt-2">
+         {% csrf_token %}
+         {% bootstrap_form form %}
+       <a href="{% url 'home:home_render' %}"><input type="submit" value="Login" class="btn btn-success py-md-3 px-md-5 me-3 mt-3"></a>
+    
+       </form>
+    <p class="mt-2"><a href="{% url 'password_reset' %}">Forgot password?</a></p>
+    <p>New to Smart Farming?<a class="text-success font-weight-bold text-decoration-underline"href="{% url 'accounts:signup' %}"> Sign up</a> </p> 
+  </div>
+</div>
+
+
 </div>
 
 {% endblock %}

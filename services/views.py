@@ -2,6 +2,7 @@ from audioop import reverse
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required 
 from .form import cropSuggestionForm  
+@login_required
 def crop_Suggestions(request):
     if request.method=='POST':
         form=cropSuggestionForm(request.POST)
@@ -12,6 +13,6 @@ def crop_Suggestions(request):
         form=cropSuggestionForm()    
     context={'form':form}
     return render(request,'suggest/suggest.html',context)
-
+@login_required 
 def crop_predictions(request):
     return (render(request,'predict/predict.html'))
